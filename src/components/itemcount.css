@@ -1,0 +1,59 @@
+.card{
+    margin: 10px;
+    height: 250px;
+    width: 250px;
+    background-color: rgb(245, 243, 243);
+    border: 1px solid grey;
+    text-align: center;
+}
+p{
+    color: black;
+}
+
+.material-icons.md-dark { 
+    color: rgba(0, 0, 0, 0.54); 
+}
+
+.card_img{
+    height: 50%;
+    padding-top: 15px;
+}
+
+.card_cart{
+    height: 15%;
+    width: 90%;
+    display: flex;
+    border: 1px solid black;
+    margin-left: 10px;
+    margin-top: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_cart button{
+    width: 30%;
+    height: 100%;
+    border: none;
+}
+
+.card_add{
+    height: 15%;
+    width: 90%;
+    margin-left: 10px;
+    margin-top: 3px;
+    
+    text-align: center;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.card_add p{
+    color: black;
+}
+
+.card_add button{
+    border: none;
+}
