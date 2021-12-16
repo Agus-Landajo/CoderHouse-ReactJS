@@ -45,6 +45,7 @@ const ItemCount = ({ stock, inicial }) => {
           </button>
         </div>
       </div>
+      
     </>
   );
 };

@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <div className="App-header"></div>
       <Header/>
-      <ItemListContainer texto="Este texto viene de un props que imprime el ItemListContainer"/>
+      <ItemListContainer/>
     </div>
   );
 }
