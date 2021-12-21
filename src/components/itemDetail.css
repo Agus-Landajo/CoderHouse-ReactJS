@@ -1,0 +1,19 @@
+.itemContainer{
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+}
+
+.itemContainer p{
+    color: white;
+}
+
+.item_img{
+    width: 40%;
+}
+
+.item_img img{
+    width: 100%;
+    height: 100%;
+}

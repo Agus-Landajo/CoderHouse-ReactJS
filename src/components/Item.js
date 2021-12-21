@@ -3,17 +3,17 @@ const Item = ({item})=>{
     return(
         <>
             <div key={item.id} className="item">
-            <div className="item_img">
-              <p>{item.title}</p>
-              <br />
-              <p>{item.pictureUrl}</p>
+            <div className="item_header">
+              <img className="item_header_img" src={item.pictureUrl} alt="Fondo" />           
             </div>
+            <p className="item_title">{item.title}</p>
             <div className="item_details">
               <button>
-                <p>Ver detalles</p>
+                <p>Mas información</p>
               </button>
+              <p>${item.price}</p>
             </div>
-            <p>${item.price}</p>
+            
           </div>
         </>
     )

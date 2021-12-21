@@ -1,15 +1,16 @@
 import React from "react";
-import "./itemListContainer.css";
 import ItemCount from "./ItemCount";
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
+import "./itemListContainer.css";
+
 
 const promiseProducts = () => {
   return new Promise((resolve, reject) => {
     setTimeout(
       () =>
         resolve([
-          { id: 1, title: "Undertale", price: 500, pictureUrl: "imagen" },
+          { id: 1, title: "Undertale", price: 500, pictureUrl: "https://www.nawpic.com/media/2020/undertale-spoiler-nawpic.jpg" },
           { id: 2, title: "Hollow Knight", price: 300, pictureUrl: "imagen" },
           { id: 3, title: "Spiritfearer", price: 200, pictureUrl: "imagen" },
         ]),2000
