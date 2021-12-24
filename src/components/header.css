@@ -8,6 +8,7 @@ header{
 
 header h1{
     width: 20%;
+    margin-left: 30px;
 }
 
 nav{
@@ -23,19 +24,16 @@ nav>ul{
     padding: 10px;
 }
 
-nav li{
+.link{
     max-width: 20%;
     flex-grow: 1;
     padding: 10px 5px;
     border: 1px solid rgb(170, 167, 167);
-}
-
-nav li>a {
     color: rgb(233, 229, 229);
     text-decoration: none;
+    transition: all 0.5s;
 }
-
-nav li:hover{
+.link:hover{
     background-color:  #535d5e;
-    transition: 1s;
+    transition: 0.5s;
 }
