@@ -1,6 +1,4 @@
 import { NavLink } from "react-router-dom";
-import ItemDetailContainer from "./ItemDetailContainer";
-
 const Item = ({ item }) => {
   return (
     <>

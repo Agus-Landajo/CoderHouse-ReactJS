@@ -2,11 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./itemcount.css";
 
-const ItemCount = ({ stock, inicial }) => {
-  let [contador, setContador] = useState(inicial);
+const ItemCount = ({item}) => {
+  let [contador, setContador] = useState(0);
 
   const sumar = () => {
-    if (contador < stock) {
+    if (contador < item.stock) {
       setContador(contador + 1);
     }
   };
@@ -18,17 +18,17 @@ const ItemCount = ({ stock, inicial }) => {
   };
 
   const onAdd =()=>{
-      if(contador > 0 && contador < stock){
+      if(contador > 0 && contador < item.stock){
           alert(`Acabas de comprar ${contador} items`);
       }
-      stock = stock - contador;
+      item.stock = item.stock - contador;
   }
 
   return (
     <>
       <div className="card">
         <div className="card_img">
-          <p>Aca iria el producto</p>
+            <img src={item.cartPictureUrl} alt={item.title} />
         </div>
         <div className="card_cart">
           <button onClick={restar}>

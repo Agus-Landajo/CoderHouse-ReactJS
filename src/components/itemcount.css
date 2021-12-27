@@ -2,7 +2,7 @@
     margin: 10px;
     height: 250px;
     width: 250px;
-    background-color: rgb(245, 243, 243);
+    background-color: rgb(34, 33, 33);
     border: 1px solid grey;
     text-align: center;
 }
@@ -11,29 +11,36 @@ p{
 }
 
 .material-icons.md-dark { 
-    color: rgba(0, 0, 0, 0.54); 
+    color: rgba(226, 220, 220, 0.54); 
 }
 
 .card_img{
-    height: 50%;
-    padding-top: 15px;
+    height: 65%;
+    
+}
+
+.card_img img{
+    height: 100%;
+    width: 100%;
 }
 
 .card_cart{
     height: 15%;
     width: 90%;
     display: flex;
-    border: 1px solid black;
+    border: 1px solid rgb(238, 237, 237);
     margin-left: 10px;
-    margin-top: 40px;
+    margin-top: 6px;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .card_cart button{
     width: 30%;
     height: 100%;
     border: none;
+    background-color: transparent;
 }
 
 .card_add{
@@ -42,18 +49,18 @@ p{
     margin-left: 10px;
     margin-top: 3px;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid rgb(250, 248, 248);
     display: flex;
     align-items: center;
     justify-content: center;
-
     
 }
 
 .card_add p{
-    color: black;
+    color: rgb(230, 224, 224);
 }
 
 .card_add button{
     border: none;
+    background-color: transparent;
 }
