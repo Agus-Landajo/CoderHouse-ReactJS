@@ -64,3 +64,29 @@ p{
     border: none;
     background-color: transparent;
 }
+
+.card_to_cart{
+    background-color: rgb(22, 21, 21);
+    height: 20%;
+    width: 95%;
+    margin-left: 5px;
+    margin-top: 20px;
+    border: 1px solid rgb(250, 248, 248);
+    display: flex;
+    align-items: center;
+    border-color: rgb(166, 166, 168);
+    border-radius: 5px;
+    justify-content: space-evenly;
+    text-decoration: none;
+}
+
+.card_to_cart p{
+    font-size: 17px;
+    color: rgb(227, 227, 236);
+    font-weight: bold;
+}
+
+.card_to_cart button{
+    border: none;
+    background-color: transparent;
+}

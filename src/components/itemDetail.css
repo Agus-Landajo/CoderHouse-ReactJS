@@ -1,3 +1,4 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
 .itemContainer{
     color: white;
     display: flex;
@@ -22,12 +23,28 @@
     width: 60%;
     
 }
-
 .item_img{
     margin-bottom: 10px;
 }
 
+.item_img_small{
+    padding-top: 5px;
+    height: 100px;
+    display: flex;  
+    justify-content: space-evenly; 
+}
+.item_img_small_col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+.img_small{
+    width: 100%;
+}
 .item_img img{
-    width: 70%;
-    height: 70%;
+    width: 75%;
+    height: 75%;
+}
+
+.item_cart{
+    margin-top: -150px;
 }
