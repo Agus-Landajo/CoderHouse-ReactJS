@@ -1,11 +1,15 @@
 import React from "react";
 import "./itemDetail.css";
 import ItemCount from "./ItemCount";
+import { useCartContext } from "./CartContext";
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({item}) => {
+  const {addItem} = useCartContext();
   const onAdd = (quantityToAdd) => {
     alert("Añadiste " + quantityToAdd + " Items al carrito");
+    addItem(quantityToAdd,item);
   };
+
   return (
     <>
       {item &&

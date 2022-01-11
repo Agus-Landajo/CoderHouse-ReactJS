@@ -6,6 +6,7 @@ import {NavLink} from "react-router-dom";
 const ItemCount = ({item,onAdd}) => {
   let [contador, setContador] = useState(0);
   let [buy,setBuy] = useState(false);
+
   const sumar = () => {
     if (contador < item.stock) {
       setContador(contador + 1);
@@ -26,6 +27,7 @@ const ItemCount = ({item,onAdd}) => {
           }  
       }
       item.stock = item.stock - contador;
+      setContador(0);
   }
 
   if(buy == false){

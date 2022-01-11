@@ -55,7 +55,6 @@ const ItemDetailContainer = () => {
         setProduct(filtredData);      
     });
   }, []);
-  console.log(product);
 
   return (
     <>
