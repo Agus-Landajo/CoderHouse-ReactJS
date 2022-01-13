@@ -47,6 +47,8 @@
 
 .cart_icon{
   display: flex;
+  text-decoration: none;
+  text-align: center;
 }
 
 .no_items{
@@ -71,4 +73,127 @@
   border-radius: 100%;
   margin-top: -8px;
   
+}
+
+.cart_father{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+.cart_resume{  
+  height: 80vh;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart_resume_more_items{
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart_no_items{
+  margin-top: 100px;
+  height: 50vh;
+ text-align: center;
+  
+}
+
+.cart_items{
+  
+  width: 65%;
+}
+
+.cart_item_description{
+  width: 95%;
+  background-color: rgb(27, 27, 26);
+  border-radius: 3%;
+  padding: 15px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.cart_item_components{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.cart_item_description p{
+  color: white;
+}
+
+.cart_item_description_details{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  width: 80%;
+  align-items: center;
+  margin-top: -110px;
+}
+
+.cart_item_description_img{
+  height: 150px;
+  width: 100px;
+  
+  border-radius: 5%;
+}
+
+.cart_prices{
+ 
+  background-color: rgb(21, 21, 22);
+  border-radius: 5px;
+  width: 30%;
+  padding: 10px;
+  
+}
+
+.cart_prices_end_purchase{
+  color: white;
+  margin-top: 10px;
+  margin-left: 27px;
+  justify-self: center;
+  border-radius: 5px;
+  background-color: blue;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  border: none;
+}
+
+.cart_prices_end_purchase:hover{
+  cursor: pointer;
+}
+.cart_prices_cost{
+  width: 100%;
+  
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart_prices_cost p {
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  
+}
+
+.cart_item_remove{
+  color: grey;
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  border: none;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.cart_item_remove:hover{
+  cursor: pointer;
 }

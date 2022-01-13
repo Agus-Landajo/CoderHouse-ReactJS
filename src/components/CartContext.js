@@ -11,6 +11,7 @@ export const useCartContext = () => {
 };
 
 const CartContext = ({ children }) => {
+  const [cartTotal,setCartTotal] = useState(0);
   const [cartItems, setCartItems] = useState(0);
   const [cart, setCart] = useState([]);
 
@@ -33,15 +34,21 @@ const CartContext = ({ children }) => {
             setCartItems(cartItems + quantity);
             
       }
+      setCartTotal(cartTotal + item_copy.price * quantity);
     });
   };
 
-  const removeItem = (id) => {
-    const filtredItems = cart.filter((items) => items.id != id);
+  const removeItem = (item,quantity) => {
+    const filtredItems = cart.filter((items) => items.id != item.id);
+    setCartTotal(cartTotal - item.price * quantity)
+    setCartItems(cartItems - quantity);
     setCart(filtredItems);
+    
+    
   };
 
   const clear = () => {
+    setCartTotal(0);
     setCartItems(0);
     setCart([]);
   };
@@ -57,6 +64,7 @@ const CartContext = ({ children }) => {
   };
 
   const contextValue = {
+    cartTotal,
     cartItems,
     cart,
     addItem,
