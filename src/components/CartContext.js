@@ -72,7 +72,6 @@ const CartContext = ({ children }) => {
     clear,
   };
 
-  console.log(cart);
   return (
     <>
       <Provider value={contextValue}>{children}</Provider>
