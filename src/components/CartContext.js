@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
 import { useState } from "react/cjs/react.development";
 
-//importar useContext en los otros componentes para utlizar el valor y el contexto en si
+
 const context = createContext();
 
 const { Provider } = context;

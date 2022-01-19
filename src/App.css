@@ -1,11 +1,11 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: white;
 }
 
-.App{
+.App {
   height: 100%;
   background-color: black;
   z-index: 1;
@@ -13,17 +13,16 @@
   overflow: hidden;
 }
 
-.App:before{
+.App:before {
   z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
   content: url("imagenes/fondo.jpeg");
   opacity: 0.4;
-  
 }
 
-.footer{
+.footer {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -35,23 +34,22 @@
   background-color: #1c1e1f;
   text-align: center;
 }
-.footer p{
+.footer p {
   padding: 2px;
   color: white;
- 
 }
-.footer div iframe{
+.footer div iframe {
   height: 110px;
   width: 130px;
 }
 
-.cart_icon{
+.cart_icon {
   display: flex;
   text-decoration: none;
   text-align: center;
 }
 
-.no_items{
+.no_items {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,10 +58,9 @@
   height: 20px;
   border-radius: 100%;
   margin-top: -8px;
-  
 }
 
-.total_items{
+.total_items {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,18 +69,16 @@
   height: 20px;
   border-radius: 100%;
   margin-top: -8px;
-  
 }
 
-.cart_father{
+.cart_father {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: center;
   margin-top: 20px;
 }
 
-
-.cart_resume{  
+.cart_resume {
   height: 80vh;
   width: 85%;
   display: flex;
@@ -91,26 +86,24 @@
   justify-content: space-between;
 }
 
-.cart_resume_more_items{
+.cart_resume_more_items {
   width: 85%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.cart_no_items{
+.cart_no_items {
   margin-top: 100px;
   height: 50vh;
- text-align: center;
-  
+  text-align: center;
 }
 
-.cart_items{
-  
+.cart_items {
   width: 65%;
 }
 
-.cart_item_description{
+.cart_item_description {
   width: 95%;
   background-color: rgb(27, 27, 26);
   border-radius: 3%;
@@ -119,17 +112,17 @@
   margin-bottom: 10px;
 }
 
-.cart_item_components{
+.cart_item_components {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.cart_item_description p{
+.cart_item_description p {
   color: white;
 }
 
-.cart_item_description_details{
+.cart_item_description_details {
   display: flex;
   justify-content: space-between;
   padding-left: 10px;
@@ -138,23 +131,21 @@
   margin-top: -110px;
 }
 
-.cart_item_description_img{
+.cart_item_description_img {
   height: 150px;
   width: 100px;
-  
+
   border-radius: 5%;
 }
 
-.cart_prices{
- 
+.cart_prices {
   background-color: rgb(21, 21, 22);
   border-radius: 5px;
   width: 30%;
   padding: 10px;
-  
 }
 
-.cart_prices_end_purchase{
+.cart_prices_end_purchase {
   color: white;
   margin-top: 10px;
   margin-left: 27px;
@@ -167,12 +158,12 @@
   border: none;
 }
 
-.cart_prices_end_purchase:hover{
+.cart_prices_end_purchase:hover {
   cursor: pointer;
 }
-.cart_prices_cost{
+.cart_prices_cost {
   width: 100%;
-  
+
   display: flex;
   justify-content: space-between;
 }
@@ -181,10 +172,9 @@
   color: white;
   margin-bottom: 10px;
   margin-top: 10px;
-  
 }
 
-.cart_item_remove{
+.cart_item_remove {
   color: grey;
   position: absolute;
   right: 10px;
@@ -194,6 +184,55 @@
   background-color: transparent;
 }
 
-.cart_item_remove:hover{
+.cart_item_remove:hover {
   cursor: pointer;
+}
+
+.shopping_father {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  height: 80vh;
+}
+
+.shopping_form {
+  border: 1px solid rgb(212, 203, 203);
+  width: 400px;
+  height: 45vh;
+  padding: 20px;
+  border-radius: 7px;
+  background-color: rgb(24, 22, 22);
+  margin-right: 70px;
+}
+
+.form_inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 270px;
+  margin: 20px 10px;
+}
+.shopping_form label {
+  width: 80px;
+  font-weight: bold;
+}
+
+.shopping_form input {
+  width: 150px;
+  padding: 4px 10px;
+  border: 1px solid rgb(133, 126, 126);
+  border-radius: 3px;
+  background-color: rgb(61, 53, 53);
+  color: rgb(255, 255, 255);
+}
+
+.shopping_form textarea{
+  padding: 4px 10px;
+  height: 20px;
+  border: 1px solid rgb(133, 126, 126);
+  border-radius: 3px;
+  background-color: rgb(61, 53, 53);
+  color: rgb(255, 255, 255);
+  overflow: hidden;
 }

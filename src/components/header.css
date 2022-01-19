@@ -24,6 +24,11 @@ nav>ul{
     padding: 10px;
 }
 
+.logo_img{
+    width: 100px;
+    height: 100px;
+}
+
 .link{
     max-width: 20%;
     flex-grow: 1;
