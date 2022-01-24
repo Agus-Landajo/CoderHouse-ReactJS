@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 .App {
@@ -47,6 +48,7 @@
   display: flex;
   text-decoration: none;
   text-align: center;
+  position: relative;
 }
 
 .no_items {
@@ -58,6 +60,8 @@
   height: 20px;
   border-radius: 100%;
   margin-top: -8px;
+  position: absolute;
+  left: 20px;
 }
 
 .total_items {
@@ -69,6 +73,8 @@
   height: 20px;
   border-radius: 100%;
   margin-top: -8px;
+  position: absolute;
+  left: 20px;
 }
 
 .cart_father {
@@ -97,6 +103,11 @@
   margin-top: 100px;
   height: 50vh;
   text-align: center;
+}
+
+.cart_no_items img{
+  height: 100px;
+  width: 100px;
 }
 
 .cart_items {
@@ -211,7 +222,7 @@
   align-items: center;
   justify-content: space-between;
   width: 270px;
-  margin: 20px 10px;
+  margin: 22px 10px;
 }
 .shopping_form label {
   width: 80px;
@@ -227,6 +238,7 @@
   color: rgb(255, 255, 255);
 }
 
+
 .shopping_form textarea{
   padding: 4px 10px;
   height: 20px;
@@ -235,4 +247,13 @@
   background-color: rgb(61, 53, 53);
   color: rgb(255, 255, 255);
   overflow: hidden;
+}
+
+.shopping_form h2{
+  padding-left: 9px;
+}
+
+.form_data{
+  padding-top: 10px;
+  color: grey;
 }

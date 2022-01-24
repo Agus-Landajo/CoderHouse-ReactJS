@@ -1,7 +1,6 @@
 import { createContext, useContext } from "react";
 import { useState } from "react/cjs/react.development";
 
-
 const context = createContext();
 
 const { Provider } = context;
@@ -11,7 +10,7 @@ export const useCartContext = () => {
 };
 
 const CartContext = ({ children }) => {
-  const [cartTotal,setCartTotal] = useState(0);
+  const [cartTotal, setCartTotal] = useState(0);
   const [cartItems, setCartItems] = useState(0);
   const [cart, setCart] = useState([]);
 
@@ -20,31 +19,28 @@ const CartContext = ({ children }) => {
       const item_copy = { ...item };
 
       if (isInCart(item_copy.id)) {
-          for(let i = 0; i < cart.length; i++){
-              if(cart[i].id == item_copy.id){
-                  cart[i].quantity = cart[i].quantity + quantity;
-              }
+        for (let i = 0; i < cart.length; i++) {
+          if (cart[i].id == item_copy.id) {
+            cart[i].quantity = cart[i].quantity + quantity;
           }
+        }
         setCartItems(cartItems + quantity);
-      } else {       
-            item_copy.quantity = quantity;
-            const cartCopy = cart.slice(0);
-            cartCopy.push(item_copy);
-            setCart(cartCopy);
-            setCartItems(cartItems + quantity);
-            
+      } else {
+        item_copy.quantity = quantity;
+        const cartCopy = cart.slice(0);
+        cartCopy.push(item_copy);
+        setCart(cartCopy);
+        setCartItems(cartItems + quantity);
       }
       setCartTotal(cartTotal + item_copy.price * quantity);
     });
   };
 
-  const removeItem = (item,quantity) => {
+  const removeItem = (item, quantity) => {
     const filtredItems = cart.filter((items) => items.id != item.id);
-    setCartTotal(cartTotal - item.price * quantity)
+    setCartTotal(cartTotal - item.price * quantity);
     setCartItems(cartItems - quantity);
     setCart(filtredItems);
-    
-    
   };
 
   const clear = () => {

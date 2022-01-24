@@ -1,21 +1,20 @@
 import "./header.css";
-import React from "react"
-import {NavLink} from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
+import logo from "../imagenes/logo.png";
 
-function Header(){
-    return (
-        <>
-            <header>
-                <NavLink to="/">
-                    <h1>Indies</h1>
-                </NavLink>                
-                <NavBar/>
-            </header>
-            
-        </>
-
-    )
+function Header() {
+  return (
+    <>
+      <header>
+        <Link to="/">
+          <img className="logo_img" src={logo} alt="Logo" />
+        </Link>
+        <NavBar />
+      </header>
+    </>
+  );
 }
 
 export default Header;

@@ -3,13 +3,11 @@ import "./itemDetail.css";
 import ItemCount from "./ItemCount";
 import { useCartContext } from "./CartContext";
 
-const ItemDetail = ({item}) => {
-  const {addItem} = useCartContext();
+const ItemDetail = ({ item }) => {
+  const { addItem } = useCartContext();
   const onAdd = (quantityToAdd) => {
-    alert("Añadiste " + quantityToAdd + " Items al carrito");
-    addItem(quantityToAdd,item);
+    addItem(quantityToAdd, item);
   };
-
   return (
     <>
       {item &&
@@ -17,7 +15,7 @@ const ItemDetail = ({item}) => {
           <div key={item.id} className="itemContainer">
             <div className="item_brief">
               <div className="item_description">
-                <h2>{item.title}</h2>
+                <h2 className="h2_detail">{item.title}</h2>
                 <br />
                 <div className="item_img">
                   <img
@@ -30,7 +28,6 @@ const ItemDetail = ({item}) => {
               </div>
             </div>
             <div className="item_cart">
-              <p>Precio Actual: ${item.price}</p>
               <ItemCount item={item} onAdd={onAdd} />
             </div>
           </div>

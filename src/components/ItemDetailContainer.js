@@ -24,11 +24,12 @@ const ItemDetailContainer = () => {
           );
         })
         .catch((error) => {
+          alert("Error en la carga del producto")
           console.log(error);
         });
-    } 
+    }
   }, [id]);
-  
+
   return (
     <>
       {product.length == 0 ? (

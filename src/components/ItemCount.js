@@ -1,11 +1,11 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./itemcount.css";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const ItemCount = ({item,onAdd}) => {
+const ItemCount = ({ item, onAdd }) => {
   let [contador, setContador] = useState(0);
-  let [buy,setBuy] = useState(false);
+  let [buy, setBuy] = useState(false);
 
   const sumar = () => {
     if (contador < item.stock) {
@@ -19,29 +19,30 @@ const ItemCount = ({item,onAdd}) => {
     }
   };
 
-  const addItem =()=>{
-      if(contador > 0 && contador <= item.stock){
-          onAdd(contador);
-          if(buy == false){
-            setBuy(!buy);
-          }  
+  const addItem = () => {
+    if (contador > 0 && contador <= item.stock) {
+      onAdd(contador);
+      if (buy == false) {
+        setBuy(!buy);
       }
-      item.stock = item.stock - contador;
-      setContador(0);
-  }
+    }
+    item.stock = item.stock - contador;
+    setContador(0);
+  };
 
-  if(buy == false){
+  if (buy == false) {
     return (
-      <> 
+      <>
         <div className="card">
           <div className="card_img">
-              <img src={item.cartPictureUrl} alt={item.title} />
+            <img src={item.cartPictureUrl} alt={item.title} />
           </div>
+          <p className="card_price">${item.price}</p>
           <div className="card_cart">
             <button onClick={restar}>
               <span class="material-icons md-dark">remove</span>
             </button>
-            <p>{contador}</p>
+            <p>Cantidad: {contador}</p>
             <button onClick={sumar}>
               <span class="material-icons md-dark">add</span>
             </button>
@@ -52,42 +53,26 @@ const ItemCount = ({item,onAdd}) => {
             </button>
           </div>
         </div>
-        
       </>
     );
-  } else{
+  } else {
     return (
-      <> 
+      <>
         <div className="card">
           <div className="card_img">
-              <img src={item.cartPictureUrl} alt={item.title} />
+            <img src={item.cartPictureUrl} alt={item.title} />
           </div>
-          <div className="card_cart">
-            <button onClick={restar}>
-              <span class="material-icons md-dark">remove</span>
-            </button>
-            <p>{contador}</p>
-            <button onClick={sumar}>
-              <span class="material-icons md-dark">add</span>
-            </button>
-          </div>
-          <div className="card_add">
+          <p className="card_price">${item.price}</p>
+          <p>Item agregado al carrito</p>
+          <NavLink className="card_add" to="/cart">
             <button onClick={addItem}>
-              <p>Agregar al carro</p>
+              <p>Ver en el carrito</p>
             </button>
-          </div>
-          <NavLink className="card_to_cart" to="/cart">
-          
-            <button><p>Ir al carrito</p></button>  <span class="material-icons">shopping_cart</span>
-             
           </NavLink>
-             
         </div>
-        
       </>
     );
   }
- 
 };
 
 export default ItemCount;

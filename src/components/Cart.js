@@ -47,6 +47,7 @@ const Cart = () => {
       <>
         <div className="shopping_father">
           <form className="shopping_form" action="">
+            <h2>Datos del Comprador</h2>
             <div className="form_inputs">
               <label for="name">Nombre:</label>
               <input type="text" id="name" name="name" />
@@ -64,11 +65,15 @@ const Cart = () => {
               <textarea
                 name="comments"
                 id="comments"
-                cols="14"
+                cols="16"
                 rows="7"
               ></textarea>
             </div>
+            <p className="form_data">
+              Los datos serán enviados a una DB en Firestore
+            </p>
           </form>
+
           <div className="cart_prices">
             <h2>Resumen de la compra</h2>
             <br />
@@ -101,6 +106,10 @@ const Cart = () => {
       return (
         <>
           <div className="cart_no_items">
+            <img
+              src="https://cdn3.iconfinder.com/data/icons/shopping-and-ecommerce-29/90/empty_cart-512.png"
+              alt="empty_cart"
+            />
             <h3>No hay ningún item en el carrito actualmente</h3>
             <br />
             <Link to="/">Volver a la tienda</Link>
@@ -212,14 +221,15 @@ const Cart = () => {
                 <br />
 
                 <div className="cart_prices_cost">
-                  <p>Precio:</p> <p>${cartTotal}</p>
+                  <p>Precio:</p> <p>${cartTotal.toFixed(2)}</p>
                 </div>
                 <div className="cart_prices_cost">
                   <p>Impuestos:</p> <p>10%</p>
                 </div>
                 <hr />
                 <div className="cart_prices_cost">
-                  <p>Subtotal</p> <p>{cartTotal + (cartTotal * 10) / 100}</p>
+                  <p>Subtotal</p>{" "}
+                  <p>{(cartTotal + (cartTotal * 10) / 100).toFixed(2)}</p>
                 </div>
                 <button
                   onClick={() => {

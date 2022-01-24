@@ -27,6 +27,7 @@ const ItemListContainer = () => {
           );
         })
         .catch((error) => {
+          alert("Error en la carga de los productos");
           console.log(error);
         });
     } else {
@@ -35,6 +36,7 @@ const ItemListContainer = () => {
           setProducts(docs.map((doc) => ({ ...doc.data() })));
         })
         .catch((error) => {
+          alert("Error en la carga de los productos");
           console.log(error);
         });
     }
