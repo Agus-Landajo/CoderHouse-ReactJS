@@ -1,5 +1,4 @@
 import React from "react";
-import ItemCount from "./ItemCount";
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import "./itemListContainer.css";
@@ -44,7 +43,7 @@ const ItemListContainer = () => {
 
   return (
     <>
-      {products.length == 0 ? (
+      {products.length === 0 ? (
         <h3>Cargando productos...</h3>
       ) : (
         <>

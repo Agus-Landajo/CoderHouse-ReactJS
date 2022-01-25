@@ -3,7 +3,7 @@ import { useCartContext } from "./CartContext";
 import { Link } from "react-router-dom";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "./firebase.js";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 
 const Cart = () => {
   const { removeItem, clear, cart, cartTotal } = useCartContext();
@@ -13,7 +13,7 @@ const Cart = () => {
     let clientName = document.getElementById("name").value;
     let clientTelephone = document.getElementById("telephone").value;
     let clientEmail = document.getElementById("email").value;
-
+    if(clientEmail.length !== 0 && clientName.length !== 0 && clientTelephone.length !== 0){
     const salesCollection = collection(db, "ventas");
     addDoc(salesCollection, {
       buyer: {
@@ -28,40 +28,41 @@ const Cart = () => {
       .then((result) => {
         console.log(result);
         clear();
-        if (didBuy == true) {
+        if (didBuy === true) {
           setDidBuy(!didBuy);
         }
       })
       .catch((error) => {
         console.log(error);
       });
+    }
   };
 
   const endShopping = () => {
-    if (didBuy == false) {
+    if (didBuy === false) {
       setDidBuy(!didBuy);
     }
   };
-  if (didBuy == true) {
+  if (didBuy === true) {
     return (
       <>
         <div className="shopping_father">
           <form className="shopping_form" action="">
             <h2>Datos del Comprador</h2>
             <div className="form_inputs">
-              <label for="name">Nombre:</label>
-              <input type="text" id="name" name="name" />
+              <label htmlFor="name">Nombre:</label>
+              <input type="text" id="name" name="name" required/>
             </div>
             <div className="form_inputs">
-              <label for="telephone">Telefono:</label>
-              <input type="text" id="telephone" name="telephone" />
+              <label htmlFor="telephone">Telefono:</label>
+              <input type="text" id="telephone" name="telephone" required/>
             </div>
             <div className="form_inputs">
-              <label for="email">Email:</label>
-              <input type="text" id="email" name="email" />
+              <label htmlFor="email">Email:</label>
+              <input type="text" id="email" name="email" required/>
             </div>
             <div className="form_inputs">
-              <label for="comments">Comentarios</label>
+              <label htmlFor="comments">Comentarios</label>
               <textarea
                 name="comments"
                 id="comments"
@@ -102,7 +103,7 @@ const Cart = () => {
       </>
     );
   } else {
-    if (cart.length == 0) {
+    if (cart.length === 0) {
       return (
         <>
           <div className="cart_no_items">

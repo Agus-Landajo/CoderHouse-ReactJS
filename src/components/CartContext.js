@@ -1,5 +1,6 @@
+import React from "react";
 import { createContext, useContext } from "react";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 
 const context = createContext();
 
@@ -20,7 +21,7 @@ const CartContext = ({ children }) => {
 
       if (isInCart(item_copy.id)) {
         for (let i = 0; i < cart.length; i++) {
-          if (cart[i].id == item_copy.id) {
+          if (cart[i].id === item_copy.id) {
             cart[i].quantity = cart[i].quantity + quantity;
           }
         }
@@ -37,7 +38,7 @@ const CartContext = ({ children }) => {
   };
 
   const removeItem = (item, quantity) => {
-    const filtredItems = cart.filter((items) => items.id != item.id);
+    const filtredItems = cart.filter((items) => items.id !== item.id);
     setCartTotal(cartTotal - item.price * quantity);
     setCartItems(cartItems - quantity);
     setCart(filtredItems);
@@ -52,7 +53,7 @@ const CartContext = ({ children }) => {
   const isInCart = (id) => {
     let InCart = false;
     for (let i = 0; i < cart.length; i++) {
-      if (cart[i].id == id) {
+      if (cart[i].id === id) {
         InCart = true;
       }
     }
@@ -69,9 +70,7 @@ const CartContext = ({ children }) => {
   };
 
   return (
-    <>
       <Provider value={contextValue}>{children}</Provider>
-    </>
   );
 };
 

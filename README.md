@@ -8,7 +8,6 @@ Proyecto final para la carrera de Desarrollo Front-End de Coder House, consiste 
 ## Tecnologías Usadas
 * React JS
 * React-Router-Dom
-* React-Image-Gallery
 * Javascript
 * CSS
 * HTML

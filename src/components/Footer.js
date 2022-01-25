@@ -1,7 +1,7 @@
 import React from "react";
 const Footer = () => {
   return (
-    <>
+    
       <div className="footer">
         <div>
           <h3>Contactanos</h3>
@@ -21,14 +21,15 @@ const Footer = () => {
             height="500"
             id="gmap_canvas"
             src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            frameborder="0"
+            frameBorder="0"
             scrolling="no"
-            marginheight="0"
-            marginwidth="0"
+            marginHeight="0"
+            marginWidth="0"
+            title="iframe"
           ></iframe>
         </div>
       </div>
-    </>
+    
   );
 };
 export default Footer;

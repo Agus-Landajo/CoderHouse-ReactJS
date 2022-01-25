@@ -108,6 +108,7 @@
 .cart_no_items img{
   height: 100px;
   width: 100px;
+  margin-right: 15px;
 }
 
 .cart_items {

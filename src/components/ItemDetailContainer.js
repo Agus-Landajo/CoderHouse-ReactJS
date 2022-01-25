@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
-
 import { db } from "./firebase.js";
 import { getDocs, query, collection, where } from "firebase/firestore";
 
@@ -32,7 +31,7 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-      {product.length == 0 ? (
+      {product.length === 0 ? (
         <h3>Cargando detalle de un producto</h3>
       ) : (
         <>

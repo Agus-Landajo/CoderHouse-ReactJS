@@ -22,7 +22,7 @@ const ItemCount = ({ item, onAdd }) => {
   const addItem = () => {
     if (contador > 0 && contador <= item.stock) {
       onAdd(contador);
-      if (buy == false) {
+      if (buy === false) {
         setBuy(!buy);
       }
     }
@@ -30,9 +30,9 @@ const ItemCount = ({ item, onAdd }) => {
     setContador(0);
   };
 
-  if (buy == false) {
+  if (buy === false) {
     return (
-      <>
+      
         <div className="card">
           <div className="card_img">
             <img src={item.cartPictureUrl} alt={item.title} />
@@ -40,11 +40,11 @@ const ItemCount = ({ item, onAdd }) => {
           <p className="card_price">${item.price}</p>
           <div className="card_cart">
             <button onClick={restar}>
-              <span class="material-icons md-dark">remove</span>
+              <span className="material-icons md-dark">remove</span>
             </button>
             <p>Cantidad: {contador}</p>
             <button onClick={sumar}>
-              <span class="material-icons md-dark">add</span>
+              <span className="material-icons md-dark">add</span>
             </button>
           </div>
           <div className="card_add">
@@ -53,11 +53,11 @@ const ItemCount = ({ item, onAdd }) => {
             </button>
           </div>
         </div>
-      </>
+      
     );
   } else {
     return (
-      <>
+      
         <div className="card">
           <div className="card_img">
             <img src={item.cartPictureUrl} alt={item.title} />
@@ -70,7 +70,7 @@ const ItemCount = ({ item, onAdd }) => {
             </button>
           </NavLink>
         </div>
-      </>
+      
     );
   }
 };
