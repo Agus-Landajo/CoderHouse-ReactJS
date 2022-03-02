@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import CartContext from "./components/CartContext";
 import Cart from "./components/Cart";
 
+
 function App() {
   return (
     <CartContext>
